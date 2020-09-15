@@ -1,7 +1,10 @@
-tasks:
-- name: Add the users to the group wheel 
-  user:
-    name: tmc042
-    shell: /bin/bash
-    groups: wheel
-    append: yes
+---
+- name: User Add
+  hosts: all
+  tasks:
+  - name: Add the users to the group wheel 
+    user:
+      name: tmc042
+      shell: /bin/bash
+      groups: wheel
+      append: yes
