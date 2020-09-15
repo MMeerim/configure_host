@@ -1,7 +1,6 @@
 ---
 - name: User Add
   hosts: all
-  become: yes
   tasks:
   - name: Add the users to the group wheel 
     user:
