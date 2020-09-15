@@ -9,3 +9,10 @@
       shell: /bin/bash
       groups: wheel
       append: yes
+
+   - name: Add the users to the group wheel 
+     user:
+      name: rjb918
+      shell: /bin/bash
+      groups: wheel
+      append: yes
