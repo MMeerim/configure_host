@@ -5,14 +5,7 @@
   tasks:
   - name: Add the users to the group wheel 
     user:
-      name: barryc
-      shell: /bin/bash
-      groups: wheel
-      append: yes
-
-   - name: Add the users to the group wheel 
-     user:
-      name: rjb918
+      name: {{username}}
       shell: /bin/bash
       groups: wheel
       append: yes
