@@ -8,4 +8,4 @@
       shell: /bin/bash
       groups: wheel
       append: yes
-    sudo: yes
+  sudo: yes
