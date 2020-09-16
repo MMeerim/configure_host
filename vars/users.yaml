@@ -1,4 +1,6 @@
+---
 vars:
-  username: tmc042 
-  username: barryc
-  username: rjb918
+  usernames:
+    - tmc042 
+    - barryc
+    - rjb918
