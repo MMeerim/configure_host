@@ -1,3 +1,4 @@
-username: tmc042 
-username: barryc
-username: rjb918
+vars:
+  username: tmc042 
+  username: barryc
+  username: rjb918
