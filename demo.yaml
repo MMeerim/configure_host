@@ -5,7 +5,8 @@
   tasks:
   - name: Add the users to the group wheel 
     user:
-      name: "{{ usernames }}"
+      name: "{{ item }}"
       shell: /bin/bash
       groups: wheel
+    with_items: "{{ usernames }}"
       append: yes
