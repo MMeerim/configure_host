@@ -7,11 +7,10 @@
     - username: "rjb918"
     - username: "barryc"
     - username: "jjn613"
-    tasks:
-
-    - name: Adding User "{{ item.username }}"
-      user:
-        name: "{{ item.username }}"
-        create_home: yes
-        groups: wheel
-      with_items: "{{ users }}"
+  tasks:
+  - name: Adding User "{{ item.username }}"
+    user:
+      name: "{{ item.username }}"
+      create_home: yes
+      groups: wheel
+    with_items: "{{ users }}"
