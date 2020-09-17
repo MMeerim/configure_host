@@ -2,11 +2,19 @@
 - name: User Add
   hosts: all
   become: yes
-  tasks:
-  - name: Add the users to the group wheel 
-    user:
-      name: "{{ item }}"
+  vars:
+    users:
+    - username: "rjb918"
+    - username: "barryc"
+    - username: "jjn613"
+    tasks:
+
+    - name: Add the users to the group wheel 
+      group:
+        name: wheel
       shell: /bin/bash
-      groups: wheel
-    with_items: "{{ usernames }}"
       append: yes
+
+    - name: Adding User "{{ item.username }}"
+      user:
+        name: "{{ item.username }}"
