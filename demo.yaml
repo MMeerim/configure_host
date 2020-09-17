@@ -9,12 +9,9 @@
     - username: "jjn613"
     tasks:
 
-    - name: Add the users to the group wheel 
-      group:
-        name: wheel
-      shell: /bin/bash
-      append: yes
-
     - name: Adding User "{{ item.username }}"
       user:
         name: "{{ item.username }}"
+        create_home: yes
+        groups: wheel
+      with_items: "{{ users }}"
