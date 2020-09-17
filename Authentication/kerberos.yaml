@@ -1,0 +1,9 @@
+---
+- name: Install kerberos package
+  hosts: all
+  become: yes
+tasks: 
+- name: Install kerberos package
+  yum:
+    name: krb5-libs
+    state: present
