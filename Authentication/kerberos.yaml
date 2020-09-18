@@ -2,9 +2,8 @@
 - name: Install kerberos package
   hosts: all
   become: yes
-tasks: 
-- name: Install kerberos package
-  yum:
-    name:
-      - httpd
-    
+  tasks: 
+    - name: Install kerberos package
+      yum:
+        name: krb5-lib
+        state: latest    
