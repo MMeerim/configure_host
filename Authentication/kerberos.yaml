@@ -5,5 +5,5 @@
 tasks: 
 - name: Install kerberos package
   yum:
-    name: krb5-libs
+    name: "krb5-libs"
     state: latest
