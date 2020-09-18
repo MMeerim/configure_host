@@ -1,9 +1,12 @@
 ---
-- name: Install kerberos package
+- name: Install list of packages for authentication
   hosts: all
   become: yes
   tasks: 
-    - name: Install kerberos package
+    - name: Install list of packages for authentication
       yum:
-        name: krb5-libs
-        state: latest    
+        name: 
+          - krb5-libs
+          - openldap-clients 
+          - nss-pam-ldapd
+        state: present    
