@@ -23,4 +23,16 @@
       destination_port: "22"
       source: 10.120.46.0/24
       jump: ACCEPT
-      comment:  PIPS-OS Global Protect VPN SSH Access 
+      comment:  PIPS-OS Global Protect VPN SSH Access
+
+  hosts: all
+  become: yes
+  tasks: 
+  - name: Allow MMS Tools Access
+    iptables:
+      chain: INPUT
+      protocol: tcp
+      destination_port: "22"
+      source: 129.105.106.0/25
+      jump: ACCEPT
+      comment: Allow MMS Tools Access
