@@ -11,4 +11,16 @@
       source: 10.120.47.0/24
       ctstate: NEW
       jump: ACCEPT
-      comment: Allow DAPS VPN SSH Access
+      comment:  DAPS Global Protect VPN SSH Access
+
+   hosts: all
+   become: yes
+   tasks: 
+   - name: Allow PIPS-Infra VPN SSH Access
+     iptables:
+       chain: INPUT
+       protocol: tcp
+       destination_port: "22"
+       source: 10.120.46.0/24
+       jump: ACCEPT
+       comment:  PIPS-OS Global Protect VPN SSH Access 
