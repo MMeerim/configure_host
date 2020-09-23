@@ -1,5 +1,9 @@
 ---
 - name: Allow incoming VPN SSH Access
+  hosts: all
+  become: yes
+tasks:
+- name: Allow DAPS VPN SSH Access
   iptables:
     chain: INPUT
     protocol: tcp
