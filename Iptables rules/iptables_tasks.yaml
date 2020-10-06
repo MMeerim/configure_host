@@ -10,5 +10,11 @@
       enabled: false
   
   tasks:
-  - name: Ensure iptables is present
-    package: name=iptables-service state=present
+  - name: "Install iptables-services"
+    yum: >
+      name=iptables-services
+      state=present
+    when: ansible_distribution_major_version|int == 7
+    tags:
+      - firewall
+      - pkgs
