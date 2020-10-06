@@ -10,5 +10,5 @@
       enabled: false
   
   tasks:
-  - name: Ensure iptables is present.
+  - name: Ensure iptables is present
     package: name=iptables state=present
