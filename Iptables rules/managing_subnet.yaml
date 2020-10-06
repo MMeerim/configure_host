@@ -1,5 +1,30 @@
 ---
-- name: Allow incoming VPN SSH Access
+- name: Disable firewalld and install Iptables
+  hosts: all
+  become: yes
+  tasks:
+  - name: Disable firewalld
+    command: systemctl disable firewalld
+  - name: Stop firewalld
+    command: systemctl stop firewalld
+  
+  hosts: all
+  become: yes
+  tasks: 
+  - name: Install iptables
+    yum:
+      name: iptables-services
+      state: present
+  
+  hosts: all
+  become: yes
+  tasks:
+  - name: Start iptables
+    command: systemctl start iptables
+  - name:  Enable iptables
+    command: systemctl enable iptables
+
+- name: Iptables rules
   hosts: all
   become: yes
   tasks:
