@@ -31,7 +31,7 @@
   - name: Enable ip6tables
     service:
       name: ip6tables
-      enabled:yes
+      enabled: yes
   tasks:
   - name: Allow DAPS VPN SSH Access
     iptables:
