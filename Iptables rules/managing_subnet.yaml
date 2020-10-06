@@ -21,9 +21,13 @@
   tasks:
   - name: Start iptables
     command: systemctl start iptables
+  - name: Start ip6tables
+    command: Systemctl start ip6tables
   - name:  Enable iptables
     command: systemctl enable iptables
-
+  - name: Enable ip6tables
+    command: systemctl enable ip6tables
+    
 - name: Iptables rules
   hosts: all
   become: yes
