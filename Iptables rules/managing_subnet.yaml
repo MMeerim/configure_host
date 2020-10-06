@@ -14,13 +14,24 @@
       state: present
   tasks:
   - name: Start iptables
-    command: systemctl start iptables
+    service:
+      name: iptables.service
+      state: started
+  tasks:
   - name: Start ip6tables
-    command: Systemctl start ip6tables
+    service:
+      name: ip6tables
+      state: started
+  tasks:
   - name:  Enable iptables
-    command: systemctl enable iptables
+    service:
+      name: iptables
+      enabled: yes
+  tasks:
   - name: Enable ip6tables
-    command: systemctl enable ip6tables
+    service:
+      name: ip6tables
+      enabled:yes
   tasks:
   - name: Allow DAPS VPN SSH Access
     iptables:
