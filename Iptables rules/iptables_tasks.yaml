@@ -1,0 +1,13 @@
+---
+  hosts: all
+  become: yes
+  tasks:
+- name:  Disable the firewalld service (on RHEL, if configured)
+  service:
+    name: firewalld
+    state: stopped
+    enabled: false
+  when:
+    - ansible_os_family == "RedHat"
+    - firewall_disable_firewalld
+    - firewalld_installed.rc == 0
