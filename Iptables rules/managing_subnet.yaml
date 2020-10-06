@@ -10,12 +10,12 @@
   tasks: 
   - name: Install iptables
     yum:
-      name: iptables-services
+      name: iptables-service
       state: present
   tasks:
   - name: Start iptables
     service:
-      name: iptables.service
+      name: iptables
       state: started
   tasks:
   - name: Start ip6tables
@@ -60,3 +60,9 @@
       source: 129.105.106.0/25
       jump: ACCEPT
       comment: Allow MMS Tools Access
+  tasks: 
+  - name: Restart iptables
+    service: 
+      name: iptables
+      state: restarted
+    
