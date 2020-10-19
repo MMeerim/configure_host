@@ -1,5 +1,6 @@
 ---
 - name: reload NetworkManager
+  become: yes
   service:
     name: NetworkManager
     state: reloaded
