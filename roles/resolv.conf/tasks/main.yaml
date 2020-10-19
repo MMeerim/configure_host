@@ -1,6 +1,5 @@
 ---
 - name: make sure line 'dns=none' is set in /etc/NetworkManager/NetworkManager.conf
-  hosts: all
   become: yes
   ini_file:
     path: /etc/NetworkManager/NetworkManager.conf
