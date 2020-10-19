@@ -3,4 +3,3 @@
   hosts: '{{ target }}'
   roles:
     - { role: resolv.conf }
-    - { role: users }
