@@ -1,9 +1,6 @@
 ---
 - name: Include task for DAPS
+  become: yes
   include_task: DAPS.yaml
-  when: 
 
-- name: Include task for DBA
-  include_task: DBA.yaml
-  when: 
 
