@@ -1,2 +1,6 @@
-- hosts: all
-  roles: all
+---
+- name: new host configuration
+  hosts: '{{ target }}'
+  roles:
+    - { role: resolv.conf }
+    - { role: users }
