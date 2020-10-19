@@ -1,7 +1,7 @@
 ---
 - name: User Add
   become: yes
-  include_vars: "{{ item }}"
+  include_vars: DAPS.yaml
 
 - name: Adding User "{{ item.username }}"
   become: yes
