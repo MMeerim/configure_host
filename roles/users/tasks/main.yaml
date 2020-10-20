@@ -9,4 +9,4 @@
     name: "{{ users}}"
     create_home: yes
     groups: wheel
-  with_items: "{{ username }}"
+  with_items: "{{ users }}"
