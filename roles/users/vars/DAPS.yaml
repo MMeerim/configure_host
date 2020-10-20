@@ -1,11 +1,10 @@
 ---
-vars:
-  users:
-    - username: "rjb918"
-    - username: "barryc"
-    - username: "jjn613"
-    - username: "tmc042"
-    - username: "wtb451"
-    - username: "mwc704"
-    - username: "dle665"
-    - username: "dpb657"
+users:
+  - { name: rjb918 }
+  - { name: dpb657 }
+  - { name: dle665 }  
+  - { name: barryc }
+  - { name: jjn613 }
+  - { name: tmc042 }
+  - { name: wtb451 }
+  - { name: mwc704 }

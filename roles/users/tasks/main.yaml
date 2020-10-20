@@ -6,7 +6,7 @@
 - name: Adding User
   become: yes
   user:
-    name: "{{ users}}"
+    name: "{{ item.name }}"
     create_home: yes
     groups: wheel
   with_items: "{{ users }}"
