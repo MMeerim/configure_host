@@ -1,6 +1,6 @@
 ---
 vars:
-    users:
+  users:
     - username: "rjb918"
     - username: "barryc"
     - username: "jjn613"
