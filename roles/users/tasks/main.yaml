@@ -3,10 +3,10 @@
   become: yes
   include_vars: DAPS.yaml
 
-- name: Adding User "{{ username }}"
+- name: Adding User
   become: yes
   user:
-    name: "{{ username }}"
+    name: "{{ users}}"
     create_home: yes
     groups: wheel
-  with_items: "{{ users }}"
+  with_items: "{{ username }}"
