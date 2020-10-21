@@ -11,6 +11,7 @@
     name: iptables-services
     state: latest
 - name: "Enable iptables"
+  become: yes
   service:
     name: iptables
     enabled: yes
@@ -23,6 +24,7 @@
     group: root
     mode: 0600
 - name: "Restart iptables"
+  become: yes
   service:
     name: iptables
     state: restarted
