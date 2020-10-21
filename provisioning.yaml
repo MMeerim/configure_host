@@ -4,3 +4,4 @@
   roles:
     - { role: resolv.conf }
     - { role: users }
+    - { role: iptables }
