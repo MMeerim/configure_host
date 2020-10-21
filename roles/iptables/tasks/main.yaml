@@ -1,6 +1,5 @@
 ---
 - name: Iptables configuration
-  hosts: all
   become: yes
 - name: Disable the firewalld service
   service:
