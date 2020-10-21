@@ -1,7 +1,7 @@
 ---
-- name: Iptables configuration
-  become: yes
 - name: Disable the firewalld service
+  hosts: all
+  become: yes 
   service:
     name: firewalld
     state: stopped
