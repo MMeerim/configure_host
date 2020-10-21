@@ -8,26 +8,22 @@
     state: stopped
     enabled: false
 - name: "Install iptables-services"
-  yum: >
+  yum:
     name: iptables-services
     state: latest
 - name: "Enable iptables"
-  service: >
-    name=iptables
-    enabled=yes
-    state=started
-- name: "Install iptables rules"
-  template: >
-    src=iptables.j2
-    dest=/etc/sysconfig/iptables
-    owner=root
-    group=root
-    mode=0600
-- name: "Install ip6tables rules"
-  template: >
-    src=ip6tables.j2
-    dest=/etc/sysconfig/ip6tables
-    owner=root
-    group=root
-    mode=0600
- 
+  service:
+    name: iptables
+    enabled: yes
+    state: started
+- name: "Copy iptables rules"
+  template:
+    src: iptables.j2
+    dest: /etc/sysconfig/iptables
+    owner: root
+    group: root
+    mode: 0600
+- name: "Restart iptables"
+  service:
+    name: iptables
+    state: restarted
