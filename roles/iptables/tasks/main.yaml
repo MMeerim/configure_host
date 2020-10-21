@@ -17,6 +17,7 @@
     enabled: yes
     state: started
 - name: "Copy iptables rules"
+  become: yes
   template:
     src: iptables.j2
     dest: /etc/sysconfig/iptables
