@@ -8,5 +8,5 @@
     mode: 0755
     
 - name: Execute the script
-  bacome: yes
+  become: yes
   command: sh /root/pim-bootstrap.sh
