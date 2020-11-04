@@ -5,3 +5,4 @@
     - { role: resolv.conf }
     - { role: users }
     - { role: iptables }
+    - { role: register_satellite5 }
