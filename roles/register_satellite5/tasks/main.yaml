@@ -1,0 +1,9 @@
+---
+- name: Register host to Satellite5
+  become: yes
+  template: 
+    src: pim-bootstrap.sh.j2
+    dest: /root/pim-bootstrap.sh
+    owner: root
+    mode: 755
+  
