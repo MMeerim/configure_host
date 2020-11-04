@@ -1,9 +1,12 @@
 ---
-- name: Register host to Satellite5
+- name: Copy bootstrap script to register new host into Satellite5
   become: yes
   template: 
     src: pim-bootstrap.sh.j2
     dest: /root/pim-bootstrap.sh
     owner: root
-    mode: 755
-  
+    mode: 0755
+    
+- name: Execute the script
+  bacome: yes
+  command: sh /root/pim-bootstrap.sh
