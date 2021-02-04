@@ -1,16 +1,1 @@
-# Firewall configuration written by system-config-securitylevel
-# Manual customization of this file is not recommended.
-*filter
-:INPUT ACCEPT [0:0]
-:FORWARD ACCEPT [0:0]
-:OUTPUT ACCEPT [0:0]
-:RH-Firewall-1-INPUT - [0:0]
--A INPUT -s 192.128.13.0/255.255.255.0 -p tcp -m tcp --dport 22 -j ACCEPT -m comment --comment "SSH Access"
-
-#Additional User and Application Rules
-# Example for HTTP/S
-#-A INPUT -p tcp -m multiport --dports 80,443 -j ACCEPT -m comment --comment "HTTP/S Access"
-
-
-# No entres below here, unless you know what you are doing
-COMMIT
+#yourtemplate
