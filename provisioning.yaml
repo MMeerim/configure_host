@@ -2,7 +2,4 @@
 - name: new host configuration
   hosts: all
   roles:
-    - { role: resolv.conf }
     - { role: users }
-    - { role: iptables }
-    - { role: register_satellite5 }
